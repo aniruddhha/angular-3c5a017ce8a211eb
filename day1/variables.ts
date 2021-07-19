@@ -1,3 +1,5 @@
+import { Device } from './device'
+
 //es6 -> javascript2015
 var i = 10 // no scoping and value can be changed
 let j = 20 // scoping and value can be changed 
@@ -28,5 +30,7 @@ const fn: (() => void) = function () {
 }
 const obj: {} = { delay: 1 }
 const anything: any = () => 10
+
+const dv: Device = new Device()
 
 
