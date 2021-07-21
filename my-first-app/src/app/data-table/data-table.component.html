@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="card-body">
+        <input type="text">
+        <input type="button" class="btn btn-secondary" value="search">
+    </div>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Invoice #</th>
+            <th scope="col">Date</th>
+            <th scope="col">Client</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Tax</th>
+            <th scope="col">Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let invoice of invoices;let ind = index;">
+            <td>{{ind + 1}}</td>
+            <td>{{invoice.invNo}}</td>
+            <td>{{invoice.date}}</td>
+            <td>{{invoice.client}}</td>
+            <td>{{invoice.invAmt}}</td>
+            <td>{{invoice.taxAmt}}</td>
+            <td>{{invoice.invAmt + invoice.taxAmt}}</td>
+        </tr>
+    </tbody>
+</table>
