@@ -12,6 +12,7 @@ export class DataBindingComponent {
   typ = 'button'
   progress = 10
   isCls = false
+  pSz = 18
 
   whatIsDate() {
     return new Date()
@@ -28,5 +29,13 @@ export class DataBindingComponent {
 
   decrement() {
     this.progress -= 3
+  }
+
+  onEnter() {
+    this.pSz = 30
+  }
+
+  onExit() {
+    this.pSz = 18
   }
 }
