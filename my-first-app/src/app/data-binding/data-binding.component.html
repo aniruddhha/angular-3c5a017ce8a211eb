@@ -1,9 +1,24 @@
 <div class="card">
     <div class="card-body">
+        <p> <strong>STRING INTERPOLATION</strong> </p>
         <p> OS is : {{os}} </p>
         <p> Version is : {{ver}} </p>
         <p> Calculation is : {{100*89}} </p>
         <p> Function Call : {{ whatIsDate() }} </p>
         <p class="{{clr}}"> Date is {{'android'.toUpperCase()}} </p>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <p [class]="clr"> <strong>PROPERTY BINDING </strong> Android is a mobile operating system based on a modified
+            version of the Linux kernel and other
+            open source software, designed primarily for touchscreen</p>
+        <div>
+            <input [type]="'text'">
+            <input (click)="changeClass('text-info')" [type]="typ" value="Primary" class="btn btn-primary ms-2 btn-sm">
+            <input (click)="changeClass('text-muted')" [type]="typ" value="Secondary"
+                class="btn btn-secondary ms-2 btn-sm">
+            <input (click)="changeClass('text-danger')" [type]="typ" value="Danger" class="btn btn-danger ms-2 btn-sm">
+        </div>
     </div>
 </div>

@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class DataBindingComponent {
   os = 'windows'
   ver = 11
-  clr = 'text-info'
+  clr = 'text-danger'
+  typ = 'button'
 
   whatIsDate() {
     return new Date()
+  }
+
+  changeClass(str: string) {
+    console.log(`Button Clicked ${str}`)
+    this.clr = str
   }
 }
