@@ -13,11 +13,19 @@ export class DirectivesComponent implements OnInit {
   classes = { 'alert': true, 'alert-info': true }
   btPr = true
 
+  mobiles = [ // of mobiles
+    { os: 'android', ver: 12 }, // let mobile
+    { os: 'windows', ver: 11 },
+    { os: 'iOS', ver: 15 }
+  ]
+
+  day = 2
+
   ngOnInit(): void {
   }
 
   btnClk() {
     this.btPr = !this.btPr
+    console.log(this) // this is current object under execution
   }
-
 }

@@ -24,3 +24,20 @@
         </div>
     </div>
 </div>
+<div class="card">
+    <div class="card-body">
+        <div>
+            <ul>
+                <li *ngFor="let mobile of mobiles">{{mobile.os}} -> {{mobile.ver}}</li>
+            </ul>
+        </div>
+        <div>
+            <div [ngSwitch]="day">
+                <p *ngSwitchCase="1">Monday</p>
+                <p *ngSwitchCase="2">Tuesday</p>
+                <p *ngSwitchCase="3">Wedensday</p>
+                <p *ngSwitchDefault>Sunday</p>
+            </div>
+        </div>
+    </div>
+</div>
