@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-body">
+        <p [ngClass]="classes">
+            Directives are classes that add additional behavior to elements in your Angular applications. With Angular's
+            built-in directives, you can manage forms, lists, styles, and what users see.
+        </p>
+        <p [ngStyle]="style" *ngIf="btPr">
+            Directives are classes that add additional behavior to elements in your Angular applications. With Angular's
+            built-in directives, you can manage forms, lists, styles, and what users see.
+        </p>
+        <ng-template [ngIf]="btPr">
+            <p [ngStyle]="style">
+                Directives are classes that add additional behavior to elements in your Angular applications. With
+                Angular's
+                built-in directives, you can manage forms, lists, styles, and what users see.
+            </p>
+        </ng-template>
+    </div>
+</div>
+<div class="card">
+    <div class="card body">
+        <div>
+            <input type="button" class="btn btn-primary" value="Okay" (click)="btnClk()">
+        </div>
+    </div>
+</div>
