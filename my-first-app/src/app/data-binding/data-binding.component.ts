@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class DataBindingComponent {
   os = 'windows'
   ver = 11
-  clr = 'text-danger'
+  clr = ''
   typ = 'button'
+  progress = 10
+  isCls = false
 
   whatIsDate() {
     return new Date()
@@ -18,5 +20,13 @@ export class DataBindingComponent {
   changeClass(str: string) {
     console.log(`Button Clicked ${str}`)
     this.clr = str
+  }
+
+  increment() {
+    this.progress += 3
+  }
+
+  decrement() {
+    this.progress -= 3
   }
 }

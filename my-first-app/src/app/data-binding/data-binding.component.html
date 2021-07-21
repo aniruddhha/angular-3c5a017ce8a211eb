@@ -10,15 +10,34 @@
 </div>
 <div class="card">
     <div class="card-body">
-        <p [class]="clr"> <strong>PROPERTY BINDING </strong> Android is a mobile operating system based on a modified
+        <p [class]="clr" [style.color]="clr"> <strong>PROPERTY BINDING </strong> Android is a mobile operating system
+            based on a modified
             version of the Linux kernel and other
             open source software, designed primarily for touchscreen</p>
         <div>
-            <input [type]="'text'">
+            <input [type]="'text'" [(ngModel)]="clr">
             <input (click)="changeClass('text-info')" [type]="typ" value="Primary" class="btn btn-primary ms-2 btn-sm">
             <input (click)="changeClass('text-muted')" [type]="typ" value="Secondary"
                 class="btn btn-secondary ms-2 btn-sm">
             <input (click)="changeClass('text-danger')" [type]="typ" value="Danger" class="btn btn-danger ms-2 btn-sm">
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <div>
+            <p [class.text-info]="isCls"> Hello this is match progress </p>
+        </div>
+        <div>
+            <div class="progress">
+                <div class="progress-bar" [style.width.%]="progress" role="progressbar" [attr.aria-valuenow]="progress"
+                    aria-valuemin="0" aria-valuemax="100">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-2">
+            <input [type]="typ" value="Decrement" class="btn btn-danger ms-2 btn-sm" (click)="decrement()">
+            <input [type]="typ" value="Increment" class="btn btn-primary ms-2 btn-sm" (click)="increment()">
         </div>
     </div>
 </div>

@@ -1,0 +1,3 @@
+ - First I will create markup
+ - Assign varible to element property by means of property binding
+ - 
