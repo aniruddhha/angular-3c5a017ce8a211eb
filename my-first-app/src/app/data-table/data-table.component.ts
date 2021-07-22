@@ -35,5 +35,19 @@ export class DataTableComponent implements OnInit {
     // subscribe to anything 
     // initilization of state can be done here
     // etc etc 
+
+    this.invoices.forEach(invoice => {
+      if (invoice.client == 'pqr') {
+        console.log(`I got the client`)
+        console.log(invoice)
+      }
+    })
+
+    let totalInvAmt = 0
+    this.invoices.forEach(invoice => {
+      if (invoice.invAmt != null)
+        totalInvAmt = totalInvAmt + invoice.invAmt
+    })
+    console.log(totalInvAmt)
   }
 }
