@@ -23,7 +23,10 @@
             <td *ngIf="invoice.invNo != null">{{invoice?.invNo}}</td>
             <td *ngIf="invoice.date != null">{{invoice?.date}}</td>
             <td *ngIf="invoice.client != null">{{invoice?.client}}</td>
-            <td *ngIf="invoice.invAmt != null">{{invoice?.invAmt}}</td>
+            <td *ngIf="invoice.invAmt != null"
+                [ngClass]="{'text-success' : invoice.invAmt >= 100, 'text-danger' : invoice.invAmt < 100 }">
+                {{invoice?.invAmt}}
+            </td>
             <td *ngIf="invoice.taxAmt != null">{{invoice?.taxAmt}}</td>
             <td *ngIf="invoice.taxAmt != null && invoice.invAmt != null">{{invoice.taxAmt + invoice.invAmt}}</td>
         </tr>

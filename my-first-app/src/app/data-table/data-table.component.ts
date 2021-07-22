@@ -14,6 +14,11 @@ export class DataTableComponent implements OnInit {
   totalTaxAmt = 0
   grandTotal = 0
 
+  obj = {
+    'text-success': true,
+    'text-danger': false
+  }
+
   constructor(
     // this feature of TS and not of JS
     // here is public is access modifier
