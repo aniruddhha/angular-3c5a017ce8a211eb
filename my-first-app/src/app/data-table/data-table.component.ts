@@ -10,6 +10,9 @@ export class DataTableComponent implements OnInit {
 
   company: string
   invoices: Array<TableData>
+  totalInvAmt = 0
+  totalTaxAmt = 0
+  grandTotal = 0
 
   constructor(
     // this feature of TS and not of JS
@@ -44,11 +47,17 @@ export class DataTableComponent implements OnInit {
     })
 
     let totalInvAmt = 0
+    let totalTaxAmt = 0
+    let grandAmout = 0
     this.invoices.forEach(function (invoice) {
       if (invoice.invAmt != null)
         totalInvAmt = totalInvAmt + invoice.invAmt
+      if (invoice.taxAmt != null)
+        totalTaxAmt += invoice.taxAmt
     })
     console.log(totalInvAmt)
+    this.totalInvAmt = totalInvAmt
+    this.totalTaxAmt = totalTaxAmt
   }
 }
 

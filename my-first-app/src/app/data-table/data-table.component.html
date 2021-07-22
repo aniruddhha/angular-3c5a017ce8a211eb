@@ -27,5 +27,11 @@
             <td *ngIf="invoice.taxAmt != null">{{invoice?.taxAmt}}</td>
             <td *ngIf="invoice.taxAmt != null && invoice.invAmt != null">{{invoice.taxAmt + invoice.invAmt}}</td>
         </tr>
+        <tr>
+            <td colspan="4" class="text-end"><strong>Total</strong></td>
+            <td><strong>{{totalInvAmt}}</strong></td>
+            <td><strong>{{totalTaxAmt}}</strong></td>
+            <td><strong>{{totalTaxAmt + totalInvAmt}}</strong></td>
+        </tr>
     </tbody>
 </table>
