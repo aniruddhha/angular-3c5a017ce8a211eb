@@ -19,13 +19,13 @@
     </thead>
     <tbody>
         <tr *ngFor="let invoice of invoices;let ind = index;">
-            <td>{{ind + 1}}</td>
-            <td>{{invoice.invNo}}</td>
-            <td>{{invoice.date}}</td>
-            <td>{{invoice.client}}</td>
-            <td>{{invoice.invAmt}}</td>
-            <td>{{invoice.taxAmt}}</td>
-            <td>{{invoice.invAmt + invoice.taxAmt}}</td>
+            <td *ngIf="invoice.invNo !=null">{{ind}}</td>
+            <td *ngIf="invoice.invNo != null">{{invoice?.invNo}}</td>
+            <td *ngIf="invoice.date != null">{{invoice?.date}}</td>
+            <td *ngIf="invoice.client != null">{{invoice?.client}}</td>
+            <td *ngIf="invoice.invAmt != null">{{invoice?.invAmt}}</td>
+            <td *ngIf="invoice.taxAmt != null">{{invoice?.taxAmt}}</td>
+            <td *ngIf="invoice.taxAmt != null && invoice.invAmt != null">{{invoice.taxAmt + invoice.invAmt}}</td>
         </tr>
     </tbody>
 </table>
