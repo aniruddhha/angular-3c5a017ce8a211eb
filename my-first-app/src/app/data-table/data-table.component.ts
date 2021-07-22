@@ -44,10 +44,17 @@ export class DataTableComponent implements OnInit {
     })
 
     let totalInvAmt = 0
-    this.invoices.forEach(invoice => {
+    this.invoices.forEach(function (invoice) {
       if (invoice.invAmt != null)
         totalInvAmt = totalInvAmt + invoice.invAmt
     })
     console.log(totalInvAmt)
   }
 }
+
+
+const fn = function (num1: number, num2: number) {
+  return num1 + num2
+}
+
+const fn1 = (num1: number, num2: number) => num1 + num2 // fat arrow or lambda
