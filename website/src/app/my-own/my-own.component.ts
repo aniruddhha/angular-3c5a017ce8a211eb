@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyOwnComponent implements OnInit {
 
-  isSh = true
+  isSh = false
   constructor() { }
 
   ngOnInit(): void {
@@ -22,5 +22,9 @@ export class MyOwnComponent implements OnInit {
     else if (item == 2) { } //copy
     else { } //paste
     this.isSh = false
+  }
+
+  onBtn(nm: object) {
+    console.log(nm)
   }
 }

@@ -1,4 +1,4 @@
-<div class="dropdown mt-3">
+<div class="dropdown mt-3" #dv>
     <a class="btn btn-secondary dropdown-toggle" [ngClass]="{show : isSh}" href="#" role="button" id="dropdownMenuLink"
         data-bs-toggle="dropdown" aria-expanded="false" (click)="onDropdownClicked()">
         Dropdown link
@@ -9,4 +9,7 @@
         <li><a class="dropdown-item" (click)=onItemClick(2)>Copy</a></li>
         <li><a class="dropdown-item" (click)=onItemClick(3)>Paste</a></li>
     </ul>
+
+    <input type="text" #nm>
+    <input type="button" value="Okay" (click)="onBtn(nm)">
 </div>
