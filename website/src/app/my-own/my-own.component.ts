@@ -24,7 +24,7 @@ export class MyOwnComponent implements OnInit {
     this.isSh = false
   }
 
-  onBtn(nm: object) {
-    console.log(nm)
+  onBtn(nm: HTMLInputElement) {
+    console.log(nm.value)
   }
 }
