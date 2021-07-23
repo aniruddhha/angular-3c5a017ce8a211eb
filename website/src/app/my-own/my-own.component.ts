@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-my-own',
@@ -7,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyOwnComponent implements OnInit {
 
+  @ViewChild('nm', { static: true })
+  nm!: ElementRef
+
   isSh = false
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this)
+    console.log(this.nm)
+    this.nm.nativeElement.style.border = '1px solid red'
   }
 
   onDropdownClicked() {
