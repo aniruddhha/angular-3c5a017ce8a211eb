@@ -1,0 +1,7 @@
+<div>
+    <p> Date is {{dt | date:"dd-MMM-yyyy"}} </p>
+    <p> Account Balance is {{bal | currency}} </p>
+    <p> Account Holder {{acNm | uppercase}} </p>
+    <p> Account Holder {{acNm | uppercase | slice:2:4}} </p>
+    <p> Repeat {{ '100' | rpt:5 }} </p>
+</div>

@@ -9,6 +9,8 @@ import { DirectivesComponent } from './directives/directives.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { ServiceComponent } from './service/service.component';
 import { DataService } from './data.service';
+import { PipesComponent } from './pipes/pipes.component';
+import { CustPipe } from './cust.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { DataService } from './data.service';
     DataBindingComponent,
     DirectivesComponent,
     DataTableComponent,
-    ServiceComponent
+    ServiceComponent,
+    PipesComponent,
+    CustPipe
   ],
   imports: [
     BrowserModule,
