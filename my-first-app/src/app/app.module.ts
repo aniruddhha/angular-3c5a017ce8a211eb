@@ -11,6 +11,8 @@ import { ServiceComponent } from './service/service.component';
 import { DataService } from './data.service';
 import { PipesComponent } from './pipes/pipes.component';
 import { CustPipe } from './cust.pipe';
+import { IpComponent } from './ip/ip.component';
+import { OpComponent } from './op/op.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { CustPipe } from './cust.pipe';
     DataTableComponent,
     ServiceComponent,
     PipesComponent,
-    CustPipe
+    CustPipe,
+    IpComponent,
+    OpComponent
   ],
   imports: [
     BrowserModule,
