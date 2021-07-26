@@ -22,8 +22,8 @@ import { DataService } from './data.service';
   imports: [
     BrowserModule,
     FormsModule
-  ],
-  // providers: [DataService], // module level
+  ], // providers: [DataService], // module level
+ 
   bootstrap: [AppComponent] // launching -> root module
 })
 export class AppModule { }
