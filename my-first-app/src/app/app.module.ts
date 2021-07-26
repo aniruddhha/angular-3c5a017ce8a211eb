@@ -7,6 +7,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { DataTableComponent } from './data-table/data-table.component';
+import { ServiceComponent } from './service/service.component';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -14,13 +16,14 @@ import { DataTableComponent } from './data-table/data-table.component';
     FancyDivComponent,
     DataBindingComponent,
     DirectivesComponent,
-    DataTableComponent
+    DataTableComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  // providers: [DataService], // module level
   bootstrap: [AppComponent] // launching -> root module
 })
 export class AppModule { }
