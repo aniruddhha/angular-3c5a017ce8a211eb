@@ -15,6 +15,7 @@ import { IpComponent } from './ip/ip.component';
 import { OpComponent } from './op/op.component';
 import { CountrySelectionComponent } from './country-selection/country-selection.component';
 import { CityDropdownComponent } from './city-dropdown/city-dropdown.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +30,14 @@ import { CityDropdownComponent } from './city-dropdown/city-dropdown.component';
     IpComponent,
     OpComponent,
     CountrySelectionComponent,
-    CityDropdownComponent
+    CityDropdownComponent,
+    TemplateDrivenFormComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule // Template Driven Forms
   ], // providers: [DataService], // module level
- 
+
   bootstrap: [AppComponent] // launching -> root module
 })
 export class AppModule { }
