@@ -18,6 +18,7 @@ import { CityDropdownComponent } from './city-dropdown/city-dropdown.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { DataDrivenFormComponent } from './data-driven-form/data-driven-form.component';
 import { ChatModule } from './chat/chat.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ChatModule } from './chat/chat.module';
     FormsModule, // Template Driven Forms
     ReactiveFormsModule, // for data driven forms
 
-    ChatModule
+    // ChatModule, // commented because DashboardModule exports ChatModule 
+    DashboardModule
   ], // providers: [DataService], // module level
   bootstrap: [AppComponent] // launching -> root module
 })
