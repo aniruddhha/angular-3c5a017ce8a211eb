@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-data-driven-form',
@@ -15,15 +15,32 @@ export class DataDrivenFormComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
+    const emlVld = Validators.compose([
+      Validators.required
+    ])
+
+    const passVld = Validators.compose([
+      Validators.required
+    ])
+
     this.fg = this.fb.group({
-      email: this.fb.control(''),
-      password: this.fb.control(''),
+      email: this.fb.control('', emlVld),
+      password: this.fb.control('', passVld),
       chk: this.fb.control(false)
     })
   }
 
   onSub() {
-    // console.log(this.fg)
-    console.log(this.fg.value)
+    console.log(this.fg)
+    // console.log(this.fg.value)
+  }
+
+  emailControl() {
+    return this.fg.get('email')
+  }
+
+  passwordControl() {
+    return this.fg.get('password')
   }
 }
