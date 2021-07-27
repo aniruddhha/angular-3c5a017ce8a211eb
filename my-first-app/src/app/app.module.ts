@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FancyDivComponent } from './fancy-div/fancy-div.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { ServiceComponent } from './service/service.component';
@@ -16,6 +16,7 @@ import { OpComponent } from './op/op.component';
 import { CountrySelectionComponent } from './country-selection/country-selection.component';
 import { CityDropdownComponent } from './city-dropdown/city-dropdown.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { DataDrivenFormComponent } from './data-driven-form/data-driven-form.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +32,13 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     OpComponent,
     CountrySelectionComponent,
     CityDropdownComponent,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    DataDrivenFormComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule // Template Driven Forms
+    FormsModule, // Template Driven Forms
+    ReactiveFormsModule // for data driven forms
   ], // providers: [DataService], // module level
 
   bootstrap: [AppComponent] // launching -> root module

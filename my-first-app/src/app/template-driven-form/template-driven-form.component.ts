@@ -15,6 +15,6 @@ export class TemplateDrivenFormComponent implements OnInit {
 
   onSub(frm: NgForm) {
     console.log(`Form Submitted`)
-    console.log(frm)
+    console.log(frm.value)
   }
 }
