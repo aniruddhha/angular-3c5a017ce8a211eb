@@ -17,6 +17,7 @@ import { CountrySelectionComponent } from './country-selection/country-selection
 import { CityDropdownComponent } from './city-dropdown/city-dropdown.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { DataDrivenFormComponent } from './data-driven-form/data-driven-form.component';
+import { ChatModule } from './chat/chat.module';
 
 @NgModule({
   declarations: [
@@ -38,9 +39,10 @@ import { DataDrivenFormComponent } from './data-driven-form/data-driven-form.com
   imports: [
     BrowserModule,
     FormsModule, // Template Driven Forms
-    ReactiveFormsModule // for data driven forms
-  ], // providers: [DataService], // module level
+    ReactiveFormsModule, // for data driven forms
 
+    ChatModule
+  ], // providers: [DataService], // module level
   bootstrap: [AppComponent] // launching -> root module
 })
 export class AppModule { }
