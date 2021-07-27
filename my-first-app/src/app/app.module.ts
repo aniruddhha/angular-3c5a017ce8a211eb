@@ -13,6 +13,8 @@ import { PipesComponent } from './pipes/pipes.component';
 import { CustPipe } from './cust.pipe';
 import { IpComponent } from './ip/ip.component';
 import { OpComponent } from './op/op.component';
+import { CountrySelectionComponent } from './country-selection/country-selection.component';
+import { CityDropdownComponent } from './city-dropdown/city-dropdown.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { OpComponent } from './op/op.component';
     PipesComponent,
     CustPipe,
     IpComponent,
-    OpComponent
+    OpComponent,
+    CountrySelectionComponent,
+    CityDropdownComponent
   ],
   imports: [
     BrowserModule,

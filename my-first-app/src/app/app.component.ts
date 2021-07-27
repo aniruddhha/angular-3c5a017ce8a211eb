@@ -9,6 +9,7 @@ import { DataService } from './data.service';
 export class AppComponent {
   title = 'my-first-app';
   cl = ''
+  country = ''
 
   constructor(
 
@@ -19,5 +20,10 @@ export class AppComponent {
   clkEv(cl: string) {
     console.log('event came out')
     this.cl = cl
+  }
+
+  fn(cnt: string) {
+    this.country = cnt
+    console.log(cnt)
   }
 }
