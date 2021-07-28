@@ -19,6 +19,11 @@ export class LoginComponent implements OnInit {
   onLogin(frm: NgForm) {
     console.log(frm.value)
 
-    this.router.navigate(['dashboard', frm.value.email]) // passing route paramaters from navigate function
+    this.router.navigate(
+      ['dashboard', frm.value.email], {
+      queryParams: {
+        ttl: 10
+      }
+    }) // passing route paramaters from navigate function
   }
 }
