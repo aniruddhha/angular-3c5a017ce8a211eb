@@ -9,7 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const dashRoutes: Routes = [
-  { path: 'invoices', component: InvoicesComponent },
+  { path: 'invoices/:invId', component: InvoicesComponent },
   { path: 'orders', component: OrdersComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'customers', component: CustomersComponent }
@@ -18,7 +18,7 @@ const dashRoutes: Routes = [
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', redirectTo: '' },
-  { path: 'dashboard', component: DashboardComponent, children: dashRoutes },
+  { path: 'dashboard/:usId', component: DashboardComponent, children: dashRoutes },
   { path: '**', component: NotFoundComponent }
 ];
 

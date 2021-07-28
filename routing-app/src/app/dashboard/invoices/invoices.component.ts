@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-invoices',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvoicesComponent implements OnInit {
 
-  constructor() { }
+  id = ''
+
+  constructor(
+    private actRt: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    this.actRt.params.subscribe(prm => this.id = prm['invId'])
   }
-
 }
