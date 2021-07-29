@@ -11,6 +11,7 @@ import { InvoicesComponent } from './dashboard/invoices/invoices.component';
 import { OrdersComponent } from './dashboard/orders/orders.component';
 import { ProductsComponent } from './dashboard/products/products.component';
 import { CustomersComponent } from './dashboard/customers/customers.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CustomersComponent } from './dashboard/customers/customers.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

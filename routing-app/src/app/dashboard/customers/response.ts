@@ -4,7 +4,7 @@ export interface AppRes {
     total: number;
     total_pages: number;
     data: Array<CustData>;
-    support: Support
+    support: Support;
 }
 
 export interface CustData {
