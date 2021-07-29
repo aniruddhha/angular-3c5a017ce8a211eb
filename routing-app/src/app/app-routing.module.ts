@@ -18,6 +18,7 @@ const dashRoutes: Routes = [
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', redirectTo: '' },
+  { path: 'dashboard', redirectTo: 'dashboard/111', pathMatch: 'full' },
   { path: 'dashboard/:usId', component: DashboardComponent, children: dashRoutes },
   { path: '**', component: NotFoundComponent }
 ];
