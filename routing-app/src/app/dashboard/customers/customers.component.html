@@ -1,5 +1,10 @@
 <div class="container">
-    <form class="row g-3 mt-5 p-3 border" (ngSubmit)="onSave(frm)" #frm="ngForm">
+    <div class="row mt-5">
+        <div class="col">
+            <p class="text-center text-success"> {{msg}} </p>
+        </div>
+    </div>
+    <form class="row g-3  p-3 border" (ngSubmit)="onSave(frm)" #frm="ngForm">
         <div class="col">
             <input type="text" class="form-control" placeholder="Name" name="name" ngModel>
         </div>
