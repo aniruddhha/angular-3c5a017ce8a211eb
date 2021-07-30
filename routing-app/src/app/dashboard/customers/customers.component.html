@@ -37,7 +37,7 @@
                     <tr *ngFor="let cust of appRes?.data">
                         <th scope="row">{{cust.id}}</th>
                         <td>{{cust.name}}</td>
-                        <td>{{cust.year}}</td>
+                        <td>{{cust.year | currency}}</td>
                         <td [style.color]="cust.color">{{cust.color}}</td>
                         <td>{{cust.pantone_value}}</td>
                     </tr>

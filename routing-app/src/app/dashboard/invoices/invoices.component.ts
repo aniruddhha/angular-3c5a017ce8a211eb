@@ -15,6 +15,10 @@ export class InvoicesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.actRt.params.subscribe(prm => this.id = prm['invId'])
+    this.actRt.params.subscribe(
+      prm => this.id = prm['invId'], // -> progress
+      err => console.log(err),
+      () => console.log(`Completed`)
+    )
   }
 }

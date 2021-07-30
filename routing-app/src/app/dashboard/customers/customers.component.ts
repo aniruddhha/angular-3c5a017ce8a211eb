@@ -22,8 +22,11 @@ export class CustomersComponent implements OnInit {
   ngOnInit(): void {
     this.customer.getCustomers().subscribe(res => {
       console.log(res)
+      console.log('I am first')
       this.appRes = res as AppRes
     })
+
+    console.log('I am last')
   }
 
   onSave(frm: NgForm) {
